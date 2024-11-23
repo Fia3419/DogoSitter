@@ -1,9 +1,15 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using DogoSitter.Api.Models;
 
-namespace DogoSitter
+namespace DogoSitter.Api.Data
 {
     public class AppDbContext : DbContext
     {
+        public AppDbContext(DbContextOptions<AppDbContext> options)
+            : base(options)
+             { 
+
+             }
         public DbSet<DogOwner> DogOwners { get; set; }
         public DbSet<DogSitter> DogSitters { get; set; }
         public DbSet<Booking> Bookings { get; set; }
@@ -18,8 +24,7 @@ namespace DogoSitter
                 .HasPrecision(18, 2); // Adjust precision as necessary
         }
 
-        public AppDbContext(DbContextOptions<AppDbContext> options)
-            : base(options) { }
+
     }
 
 }

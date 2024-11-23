@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using DogoSitter.Api.Data;
+using Microsoft.AspNetCore.Mvc;
 
 namespace DogoSitter.Controllers
 {
