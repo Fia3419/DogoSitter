@@ -22,13 +22,12 @@ const Dogs = () => {
     }, []);
 
     return (
-        <div>
-            <h1>Dogs</h1>
-            <ul>
+        <div className="dogs-container">
+            <h1 className="dogs-header">Dogs</h1>
+            <ul className="dogs-list">
                 {dogs.map(dog => (
-                    <li key={dog.id}>
-                        {dog.name} ({dog.breed}, {dog.size})
-                        - Owner: {dog.dogOwner?.name || 'Unknown'}
+                    <li key={dog.id} className="dog-item">
+                        {dog.name} ({dog.breed}, {dog.size}) - Owner: {dog.dogOwner?.name || 'Unknown'}
                     </li>
                 ))}
             </ul>
